@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gender Equality</title>
+
+  <!-- Import Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==== RESET ==== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(180deg, rgba(230,230,250,0.9), rgba(248,200,220,0.9)), 
+                  url("LGBTQ pics/bg.jpeg") no-repeat center center fixed;
+      background-size: cover;
+      color: #333333;
+    }
+
+    /* ==== TOPBAR ==== */
+    .topbar {
+      background-color: #b26bd3;
+      color: white;
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    /* ==== HEADER ==== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #e3b9ff;
+      padding: 1rem 2rem;
+    }
+
+    .brand {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #731ea1;
+    }
+    .brand span {
+      color: #d063d9;
+    }
+
+    nav {
+      background: linear-gradient(270deg, #E6E6FA, #F8C8DC, #E6E6FA);
+      background-size: 400% 400%;
+      animation: gradientMove 8s ease infinite;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    nav a {
+      color: #5a007f;
+      text-decoration: none;
+      margin: 0 0.8rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ==== HERO SECTION ==== */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      color: #333333;
+      background: linear-gradient(rgba(230,230,250,0.8), rgba(248,200,220,0.8)),
+                  url("bg1.jpeg") center/cover no-repeat;
+      background-attachment: fixed;
+    }
+
+    .hero-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .hero-text {
+      max-width: 450px;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 12px;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-title {
+      font-family: 'Pacifico', cursive;
+      font-weight: bold;
+      font-size: 3rem;
+      background: linear-gradient(to right, #800080, #F8C8DC);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.4);
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .hero-sub {
+      margin: 1rem 0 2rem;
+      color: #823a9c;
+    }
+
+    .cta {
+      background-color: #b26bd3;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .cta:hover {
+      background-color: #a053c7;
+    }
+
+    .hero-image img {
+      border-radius: 15px;
+      width: 300px;
+      height: auto;
+    }
+
+    /* ==== GALLERY ==== */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      background-color: #fce8ff;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* ==== MAIN CONTENT ==== */
+    #main-content {
+      background: linear-gradient(rgba(230, 230, 250, 0.6), rgba(248, 200, 220, 0.6)),
+                  url("bg1.jpeg") center/cover no-repeat;
+      background-attachment: fixed;
+      padding: 40px;
+      border-radius: 15px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .content-section {
+      background: linear-gradient(to bottom right, rgba(230,230,250,0.9), rgba(248,200,220,0.9));
+      color: #333333;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    .content-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(128, 0, 128, 0.3);
+    }
+
+    .collapsible-header {
+      background-color: #b9568b;
+      color: white;
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .collapsible-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+      padding: 0 1.5rem;
+    }
+
+    .collapsible-content.open {
+      padding: 1.5rem;
+    }
+
+    .arrow {
+      transition: transform 0.3s ease;
+    }
+    .arrow.rotate {
+      transform: rotate(90deg);
+    }
+
+    /* ==== FOOTER ==== */
+    footer {
+      background-color: #b26bd3;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">Welcome to Gender Equality Website</div>
+
+  <header>
+    <div class="left">
+      <div class="brand">Gender <span>Equality</span></div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#issues">Issues</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#health">Health Tips</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-title">Gender Equality</div>
+        <p class="hero-sub">by Cassie Sofia Flores | 12-Lovelace TVL-ICT</p>
+        <a class="cta" href="#main-content" id="exploreNow">Explore More</a>
+      </div>
+
+      <div class="hero-image">
+        <div class="frame">
+          <img src="spic.jpg" alt="Equality Image">
+        </div>
+      </div>
+    </div>
+
+    <div class="wave">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,24 C200,80 400,0 720,24 C1040,48 1240,8 1440,24 L1440,48 L0,48 Z" fill="#fff"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="features">
+    <div class="card"><img src="Sp1.jpg" alt="Example 1"></div>
+    <div class="card"><img src="Sp2.jpg" alt="Example 2"></div>
+    <div class="card"><img src="Sp3.jpg" alt="Example 3"></div>
+    <div class="card"><img src="Sp4.jpg" alt="Example 4"></div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <div class="container" id="main-content">
+
+    <section class="content-section" id="about">
+      <div class="collapsible-header">About <span class="arrow">▶</span></div>
+      <div class="collapsible-content">
+        <p>This website was developed as part of my academic project focusing on Sustainable Development Goal 5: Gender Equality. It aims to educate, inform, and inspire people to take action towards equal rights, opportunities, and respect for all genders.</p>
+      </div>
+    </section>
+
+    <section class="content-section" id="issues">
+      <div class="collapsible-header">Issues <span class="arrow">▶</span></div>
+      <div class="collapsible-content">
+        <p>1. Discrimination in the workplace</p>
+        <p>2. Gender-based violence</p>
+        <p>3. Unequal representation in leadership roles</p>
+      </div>
+    </section>
+
+    <section class="content-section" id="solutions">
+      <div class="collapsible-header">Solutions <span class="arrow">▶</span></div>
+      <div class="collapsible-content">
+        <p>1. Promote equal opportunities and leadership for women.</p>
+        <p>2. Strengthen laws against harassment and violence.</p>
+        <p>3. Support inclusive workplaces through awareness and fair policies.</p>
+      </div>
+    </section>
+
+    <section class="content-section" id="health">
+      <div class="collapsible-header">Health Tips <span class="arrow">▶</span></div>
+      <div class="collapsible-content">
+        <p>1. Practice self-care and stress management.</p>
+        <p>2. Maintain a healthy work-life balance.</p>
+        <p>3. Join support groups for empowerment and confidence.</p>
+      </div>
+    </section>
+
+    <section class="content-section" id="contact">
+      <div class="collapsible-header">Contact <span class="arrow">▶</span></div>
+      <div class="collapsible-content">
+        <p>Email: cassie.flores@example.com</p>
+        <p>School: Asian Institute of Computer Studies – Commonwealth</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© <span id="year"></span> Gender Equality Website | Cassie Sofia Flores</p>
+  </footer>
+
+  <!-- INLINE JAVASCRIPT -->
+  <script>
+    // Update year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Scroll to main content
+    document.getElementById("exploreNow").addEventListener("click", (e) => {
+      e.preventDefault();
+      document.querySelector("#main-content").scrollIntoView({ behavior: "smooth" });
+    });
+
+    // Collapsible sections
+    const headers = document.querySelectorAll(".collapsible-header");
+    headers.forEach(header => {
+      header.addEventListener("click", () => {
+        const content = header.nextElementSibling;
+        const arrow = header.querySelector(".arrow");
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          content.classList.remove("open");
+          arrow.classList.remove("rotate");
+        } else {
+          document.querySelectorAll(".collapsible-content").forEach(c => {
+            c.style.maxHeight = null;
+            c.classList.remove("open");
+          });
+          document.querySelectorAll(".arrow").forEach(a => a.classList.remove("rotate"));
+          content.style.maxHeight = content.scrollHeight + "px";
+          content.classList.add("open");
+          arrow.classList.add("rotate");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
